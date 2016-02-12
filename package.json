@@ -1,19 +1,18 @@
 {
-  "name": "printer",
-  "description": "Node.js printer bindings",
+  "name": "electron-printer",
+  "description": "Node.js printer bindings -  electron builds",
   "version": "0.2.1",
-  "homepage": "http://github.com/tojocky/node-printer",
+  "homepage": "https://github.com/marcopiraccini/electron-printer",
   "author": {
-    "name": "Ion Lupascu",
-    "url": "http://program-support.co.uk/",
-    "email": "ionlupascu@gmail.com"
+    "name": "Marco Piraccini",
+    "email": "marco.piraccini@gmail.com"
   },
   "contributors": [
     "Name Lastname <email@server.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/tojocky/node-printer.git"
+    "url": "git://github.com/marcopiraccini/electron-printer.git"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

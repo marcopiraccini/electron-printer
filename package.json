@@ -1,7 +1,7 @@
 {
   "name": "electron-printer",
   "description": "Node.js printer bindings -  electron builds",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/marcopiraccini/electron-printer",
   "author": {
     "name": "Marco Piraccini",

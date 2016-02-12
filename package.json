@@ -1,7 +1,7 @@
 {
   "name": "electron-printer",
   "description": "Node.js printer bindings -  electron builds",
-  "version": "0.2.1",
+  "version": "0.0.1",
   "homepage": "https://github.com/marcopiraccini/electron-printer",
   "author": {
     "name": "Marco Piraccini",
@@ -14,18 +14,34 @@
     "type": "git",
     "url": "git://github.com/marcopiraccini/electron-printer.git"
   },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-node-gyp": "git://github.com/tojocky/grunt-node-gyp.git",
-    "grunt-nw-gyp": "git://github.com/tojocky/grunt-nw-gyp.git",
-    "nodeunit": "*"
-  },
   "engines": {
-    "node": ">= 0.8.0"
+    "electron": ">=0.36"
   },
   "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build",
+    "release-linux-ia32": "node-pre-gyp rebuild --target_arch=ia32 --target_platform=linux --runtime=electron --target=0.36.7 && node-pre-gyp --target_arch=ia32 --target_platform=linux --runtime=electron --target=0.36.7 package && node-pre-gyp-github publish --release",
+    "release-linux": "node-pre-gyp rebuild --target_arch=x64 --runtime=electron --target=0.36.7 --target_platform=linux && node-pre-gyp package --target_arch=x64 --target_platform=linux --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
+    "release-win-ia32": "node-pre-gyp rebuild --target_arch=ia32 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
+    "release-win": "node-pre-gyp rebuild --target_arch=x64 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
+    "release": "node-pre-gyp rebuild --runtime=electron --target=0.36.7 && node-pre-gyp package --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
+    "release-darwin": "HOME=~/.electron-gyp node-pre-gyp rebuild --target_platform=darwin --runtime=electron --target=0.36.7 --arch=x64 --dist-url=https://atom.io/download/atom-shell && node-pre-gyp package --target_platform=darwin --runtime=electron --target=0.36.7 && node-pre-gyp-github publish —release"
+  },
+  "binary": {
+    "module_name": "node_printer",
+    "module_path": "./build/{configuration}/electron-v0.36-{platform}-{arch}/",
+    "package_name": "electron-v0.36-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/marcopiraccini/electron-printer/releases/download/0.0.1"
+  },
+  "dependencies": {
+    "nan": "^2.1.0",
+    "node-pre-gyp": "^0.6.13",
+    "node-pre-gyp-github": "^1.1.2"
+  },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
+  "devDependencies": {
+    "nodeunit": "*"
   },
   "licenses": [
     {

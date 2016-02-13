@@ -1,7 +1,7 @@
 # electron-usb
 node-printer fork to be used with electron. It's a fork from node-printer which binary are released on github.
 It's a temporary solution until binary package will be available for node 5.1.x and
-windows / linux platforms for electron on node-printer. Pleas refer to https://github.com/tojocky/node-printer on
+windows / linux platforms for node-printer on electron runtime. Please refer to https://github.com/tojocky/node-printer on
 how to use these APIs.
 
 # Prerequisite

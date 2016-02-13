@@ -1,4 +1,4 @@
-# electron-usb
+# electron-printer
 node-printer fork to be used with electron. It's a fork from node-printer which binary are released on github.
 It's a temporary solution until binary package will be available for node 5.1.x and
 windows / linux platforms for node-printer on electron runtime. Please refer to https://github.com/tojocky/node-printer on
@@ -15,7 +15,7 @@ After the release, build the binaries for each OS.
 # Linux build
 On Ubuntu 15.10, install:
 ```
-sudo apt-get install libudev-dev libusb-1.0-0-dev g++-multilib libudev-dev:i386
+sudo apt-get install libudev-dev libusb-1.0-0-dev g++-multilib libudev-dev:i386 libcups2-dev
 ```
 And then run `npm run release-linux` (x64) or `npm run release-linux-ia32` (ia32) to publish
 the binary build

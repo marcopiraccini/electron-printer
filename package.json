@@ -30,7 +30,7 @@
     "module_name": "node_printer",
     "module_path": "./build/{configuration}/electron-v0.36-{platform}-{arch}/",
     "package_name": "electron-v0.36-{platform}-{arch}.tar.gz",
-    "host": "https://github.com/marcopiraccini/electron-printer/releases/download/0.0.3"
+    "host": "https://github.com/marcopiraccini/electron-printer/releases/download/0.0.4"
   },
   "dependencies": {
     "nan": "^2.1.0",

@@ -28,4 +28,4 @@ Always specify the VisualStudio version using `--msvs_version=xxxx`, foor instan
 Release using  `npm run release-win --msvs_version=2013` (x64) or `npm run release-win-ia32 --msvs_version=2013` (ia32)
 
 # OSx build
-After `npm i`, just use `npm run release`
+After `npm i`, just use `npm run release-darwin` (`npm run release` should work)

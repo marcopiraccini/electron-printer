@@ -1,6 +1,6 @@
 // Windows does not support PDF formats, but you can use imagemagick-native to achieve conversion from PDF to EMF.
 
-var printer = require("../lib"),
+var printer = require(".."),
     imagemagick, // will be loaded later with proper error.
     fs = require('fs'),
     filename = process.argv[2],
@@ -48,5 +48,3 @@ imagemagick.convert({
         }
     })
 })
-
-

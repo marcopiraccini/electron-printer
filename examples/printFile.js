@@ -1,5 +1,5 @@
 // use: node printFile.js [filePath printerName]
-var printer = require("../lib"),
+var printer = require(".."),
     filename = process.argv[2] || __filename;
 
 console.log('platform:', process.platform);

@@ -1,11 +1,8 @@
 var fs = require("fs");
 var child_process = require("child_process");
 var os = require("os");
+var printer_helper = require('/lib');
 
-var binary = require('node-pre-gyp');
-var path = require('path');
-var binding_path = binary.find(path.resolve(path.join(__dirname,'./package.json')));
-var printer_helper = require(binding_path);
 
 /** Return all installed printers including active jobs
  */

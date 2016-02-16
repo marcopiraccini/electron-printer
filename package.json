@@ -19,8 +19,8 @@
   },
   "scripts": {
     "install": "node-pre-gyp install --fallback-to-build",
-    "release-linux-ia32": "node-pre-gyp rebuild --target_arch=ia32 --target_platform=linux --runtime=electron --target=0.36.7 && node-pre-gyp --target_arch=ia32 --target_platform=linux --runtime=electron --target=0.36.7 package && node-pre-gyp-github publish --release",
-    "release-linux": "node-pre-gyp rebuild --target_arch=x64 --runtime=electron --target=0.36.7 --target_platform=linux && node-pre-gyp package --target_arch=x64 --target_platform=linux --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
+    "release-linux-ia32": "node-pre-gyp rebuild --target_arch=ia32 --dist-url=https://atom.io/download/atom-shell --target_platform=linux --runtime=electron --target=0.36.7 && node-pre-gyp --target_arch=ia32 --target_platform=linux --runtime=electron --target=0.36.7 package && node-pre-gyp-github publish --release",
+    "release-linux": "node-pre-gyp rebuild --target_arch=x64 --dist-url=https://atom.io/download/atom-shell --runtime=electron --target=0.36.7 --target_platform=linux && node-pre-gyp package --target_arch=x64 --target_platform=linux --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
     "release-win-ia32": "node-pre-gyp rebuild --target_arch=ia32 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
     "release-win": "node-pre-gyp rebuild --target_arch=x64 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
     "release": "node-pre-gyp rebuild --runtime=electron --target=0.36.7 && node-pre-gyp package --runtime=electron --target=0.36.7 && node-pre-gyp-github publish --release",
